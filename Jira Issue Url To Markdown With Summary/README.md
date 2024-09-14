@@ -30,10 +30,8 @@ Otherwise:
     echo -n "your-email@example.com:your-api-token" | base64
     ```
 
-3. Copy the output from the previous command. Then, run this command to store it in your Keychain:
+3. Copy the output from the previous command and replace `your-base64-string` in the following command with your actual Base64-encoded string. Then, run this command in your Terminal to store the API key in your Keychain:
 
     ```bash
     security add-generic-password -a "JiraAccount" -s "JiraApiAuthString" -w "your-base64-string"
     ```
-
-    Replace `your-base64-string` with the Base64 string you copied.
