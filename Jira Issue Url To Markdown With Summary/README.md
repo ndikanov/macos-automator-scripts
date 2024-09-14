@@ -3,7 +3,7 @@ This script is designed to extract the issue key from a Jira issue URL, retrieve
 
 ## Features
 
-- Handles both selected text or clipboard content for input. To use clipboard content, select any whitespace.
+- Handles both selected text or clipboard content for input. To use clipboard content, select any whitespace ([#1](https://github.com/ndikanov/macos-automator-scripts/issues/1)).
 - Supports Jira issue URLs in the format: `https://{subdomain}.atlassian.net/browse/{issue-key}`.
 - Extracts the issue key and fetches the summary using the Jira REST API.
 - Outputs the result as a Markdown link: `[issue-key summary](url)` or `[issue-key](url)` if the summary couldn’t be retrieved.
