@@ -1,4 +1,4 @@
-# Jira Issue URL to Markdown with Summary
+# Jira Issue URL to Markdown Link with Summary
 This script is designed to extract the issue key from a Jira issue URL, retrieve the issue summary via the Jira API, and format the output as a Markdown link with the issue key and summary.
 
 ## Features
@@ -7,7 +7,7 @@ This script is designed to extract the issue key from a Jira issue URL, retrieve
 - Supports Jira issue URLs in the format: `https://{subdomain}.atlassian.net/browse/{issue-key}`.
 - Extracts the issue key and fetches the summary using the Jira REST API.
 - Outputs the result as a Markdown link: `[issue-key summary](url)` or `[issue-key](url)` if the summary couldn’t be retrieved.
-- Uses macOS Keychain to securely retrieve the Jira API key.
+- Uses macOS Keychain to securely retrieve the base64 encoded Jira API connection string.
 
 ### Example Output
 
@@ -27,7 +27,7 @@ Otherwise:
 Download `JiraIssueUrlToMarkdownWithSummary.zip`, open the workflow file, and click Install. You can also add a hotkey for the workflow in your keyboard settings.
 
 ### Install jq
-Sctipt uses [jq](https://github.com/jqlang/jq) to parse JSON responses. Run the following command to install jq:
+Script uses [jq](https://github.com/jqlang/jq) to parse JSON responses. Run the following command to install jq:
 ```bash
 brew install jq
 ```
