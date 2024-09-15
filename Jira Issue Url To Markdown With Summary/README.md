@@ -9,7 +9,7 @@ This script is designed to extract the issue key from a Jira issue URL, retrieve
 - Outputs the result as a Markdown link: `[issue-key summary](url)` or `[issue-key](url)` if the summary couldn’t be retrieved.
 - Uses macOS Keychain to securely retrieve the Jira API key.
 
-## Example Output
+### Example Output
 
 If the issue summary is retrieved successfully, the output will look like this:
 
@@ -21,7 +21,18 @@ Otherwise:
 [KEY-2345](https://yoursubdomainhere.atlassian.net/browse/KEY-2345)
 ```
 
-## Configuring Data for Jira Connection
+## Setup
+
+### Install workflow
+Download `JiraIssueUrlToMarkdownWithSummary.zip`, open the workflow file, and click Install. You can also add a hotkey for the workflow in your keyboard settings.
+
+### Install jq
+Sctipt uses [jq](https://github.com/jqlang/jq) to parse JSON responses. Run the following command to install jq:
+```bash
+brew install jq
+```
+
+### Configure Jira Connection
 
 1. [Generate Jira API Token](https://id.atlassian.com/manage-profile/security/api-tokens)
 2. Open your terminal and run the following command to generate a Base64-encoded authentication string:
